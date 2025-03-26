@@ -1,6 +1,6 @@
-n1 = float(input("digite um numero:"))
-n2 = float(input("digite um numero:"))
-if n1>n2:
-    print(n2,n1)
+nascimento = int(input("digite o ano em que você nasceu:"))
+idade = 2025 - nascimento
+if idade >= 16:
+    print("pode votar")
 else:
-    print(n1,n2)
+    print("não pode votar")
