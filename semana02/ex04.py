@@ -1,6 +1,4 @@
-nascimento = int(input("digite o ano em que você nasceu:"))
-idade = 2025 - nascimento
-if idade >= 16:
-    print("pode votar")
-else:
-    print("não pode votar")
+valorr = float(input("digite quantos reais de gasolina você quer:"))
+valorg = 6
+valorf = valorr / valorg
+print("quantia de litros:",valorf)
