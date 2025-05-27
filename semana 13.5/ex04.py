@@ -32,3 +32,5 @@ def main():
     numeros = ler_numeros()
     numeros_sem_repetidos = remover_repetidos(numeros)
     mostrar_lista(numeros_sem_repetidos)
+
+main()
