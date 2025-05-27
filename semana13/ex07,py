@@ -1,0 +1,35 @@
+def horario():
+
+    count = 0
+    while count != 1:
+        print("-=-=-=-=-=-=-=-=-=- horario =-=-=-=-=-=-=-=")
+        hora = int(input(">     digite a hora: "))
+        minuto = int(input(">     digite os minutos: "))
+        if hora > 23 or minuto > 59:
+            print(">    Horario invalido")
+        else:
+            count += 1
+            print(f">       Horario {hora}:{minuto}")
+            return hora, minuto 
+
+def converter(hora,minuto):
+    print("=-=-=-=-=-=-=-==- Hora convertida =-=-=-=-=-=-=-==")
+    if hora <= 11 and hora >= 0:
+        print(f">     Horario {hora}:{minuto} AM")
+    elif hora > 12:
+        hora -= 12
+        print(f">     Horario {hora}:{minuto} PM")
+
+    
+
+
+
+
+def main():
+    hora, minuto =horario()
+    converter(hora, minuto )
+
+
+
+
+main()
