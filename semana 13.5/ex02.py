@@ -13,3 +13,4 @@ def main():
     else:
         resultado = soma_naturais(numero)
         print(f"A soma dos números naturais até {numero} é {resultado}")
+main()
