@@ -1,0 +1,58 @@
+def menu():
+    print ("1 - Sacar dinheiro")
+    print ("2 - Depositar dinheiro")
+    print ("3 - Mostrar saldo")
+    print ("4 - Sair")
+    opcao = int(input("selecione sua opção: "))
+    return opcao
+
+def sacar(saldo):
+
+    print("> Seu saldo é:", saldo)
+    valor = int(input("> digite a quantia que você deseja sacar: "))
+
+    if saldo < valor:
+        print("> saldo insuficiente!")
+        return saldo
+    elif saldo == valor:
+        saldo = 0
+        return saldo
+    elif saldo > valor:
+        saldo -= valor
+        print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+        return saldo
+
+def depositar(saldo):
+    print("seu saldo é: ", saldo)
+    deposito = int(input("> depositar: "))
+    saldo += deposito
+    print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+    return saldo
+
+def mostrar_saldo(saldo):
+    print("> Aqui está o seu saldo: ",saldo)
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+
+def main():
+    saldo = 0
+    count = 0
+    while count != 1:
+        menu1 = menu()
+        if menu1 == 1:
+            saldo = sacar(saldo)
+        
+        elif menu1 == 2:
+            saldo = depositar(saldo)
+
+        elif menu1 == 3:
+
+            mostrar_saldo(saldo)
+            
+        elif menu1 == 4:
+            print("você saiu do sistema!")
+            count +=1
+
+        else:
+            print("opção invalida")
+
+main()
